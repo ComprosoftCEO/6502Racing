@@ -131,6 +131,9 @@ reset:
 LDA #$01
 STA $04
 
+LDA #$00
+STA $FF
+
 ;load the horses
 LDX #$00
 horse_load1:
@@ -190,10 +193,6 @@ LDA #$a0
 STA $03
 JSR show_screen
 
-;reset the control info
-LDA #$00
-STA $FF
-
 ;wait for user input
 tinput:
 LDA $FF
@@ -206,10 +205,6 @@ STA $02
 LDA #$a2
 STA $03
 JSR show_screen
-
-;reset the control info
-LDA #$00
-STA $FF
 
 ;wait for user to input a number
 ninput:
